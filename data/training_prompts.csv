@@ -1,0 +1,46 @@
+prompt,label
+"What is the capital of France?",simple
+"Translate 'good morning' to Spanish.",simple
+"Summarize this sentence in five words: The quick brown fox jumps over the lazy dog.",simple
+"What is 17 times 23?",simple
+"Give me a one-line summary of photosynthesis.",simple
+"List three benefits of drinking water.",simple
+"What time is it in Tokyo right now?",simple
+"Write a haiku about rain.",simple
+"Is Python a programming language? Answer yes or no.",simple
+"Convert 100 Fahrenheit to Celsius.",simple
+"Name the largest ocean on Earth.",simple
+"Give me a synonym for happy.",simple
+"What is the past tense of go?",simple
+"Write a tweet announcing our new office opening.",simple
+"Explain what a database is in one sentence.",simple
+"Compare the pros and cons of SQL versus NoSQL databases for a read-heavy analytics workload.",medium
+"Write a Python function that parses a CSV file and returns the average of a numeric column, handling missing values.",medium
+"Draft a professional email to a client explaining a two-week delay in delivery and offering a discount.",medium
+"Explain how a transformer attention mechanism works to someone who knows basic machine learning.",medium
+"Refactor this code to use async/await and explain the trade-offs of the change.",medium
+"Design a REST API for a task management app with authentication and pagination. List the endpoints.",medium
+"Analyze the sentiment of these five customer reviews and summarize the main complaints.",medium
+"Write a SQL query that finds the top 10 customers by total spend in the last quarter, joining orders and customers.",medium
+"Explain the difference between supervised and unsupervised learning with two examples of each.",medium
+"Create a project plan for migrating a monolith to microservices over six months.",medium
+"Review this pull request description and suggest three improvements to the error handling.",medium
+"Write a unit test suite outline for a payment processing module, including edge cases.",medium
+"Explain how OAuth 2.0 authorization code flow works, step by step.",medium
+"Compare Kubernetes Deployments and StatefulSets and say when to use each.",medium
+"Summarize this 2000-word article about climate policy into a 200-word executive brief.",medium
+"Design a distributed rate limiter that works across 50 microservices with strict consistency requirements and analyze the failure modes under network partitions.",complex
+"Write a proof that quicksort has average-case time complexity O(n log n) and explain the recurrence relation.",complex
+"Architect a multi-region active-active system for a financial trading platform with sub-100ms latency and zero data loss. Discuss consensus protocols and trade-offs.",complex
+"Debug this race condition in a concurrent Go program and explain why the memory model allows the observed behaviour.",complex
+"Design a retrieval-augmented generation system for 15 million clinical documents under HIPAA, covering chunking, hybrid retrieval, evaluation and guardrails.",complex
+"Prove that the halting problem is undecidable using a reduction argument.",complex
+"Design an end-to-end ML pipeline for real-time fraud detection at 50M transactions per month, including feature store, drift detection and model retraining strategy.",complex
+"Analyze the security vulnerabilities in this authentication protocol and propose a formal fix, referencing the threat model.",complex
+"Write a formal specification for a distributed consensus algorithm and prove its safety properties.",complex
+"Optimize this database query plan for a 10TB dataset with skewed distributions and explain the join ordering decisions.",complex
+"Design a compiler optimization pass that eliminates redundant loads in the presence of aliasing, with correctness arguments.",complex
+"Explain the CAP theorem implications for a globally distributed database and design a system that degrades gracefully during partitions.",complex
+"Build a mathematical model of queueing delays in a hospital emergency department and derive the optimal staffing levels.",complex
+"Design a zero-trust network architecture for a healthcare organization with 20000 endpoints, covering identity, segmentation and incident response.",complex
+"Derive the backpropagation equations for a transformer with rotary position embeddings from first principles.",complex
