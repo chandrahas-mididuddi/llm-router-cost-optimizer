@@ -1,0 +1,84 @@
+# Model registry: price per 1k tokens, typical latency, context window.
+# Prices are illustrative list prices (USD) — update from the provider's
+# pricing page before using them for real decisions.
+models:
+  gpt-4o-mini:
+    provider: openai
+    tier: small
+    price_input_per_1k: 0.00015
+    price_output_per_1k: 0.0006
+    latency_ms_p50: 320
+    context_window: 128000
+    max_output_tokens: 16384
+  claude-3-5-haiku:
+    provider: anthropic
+    tier: small
+    price_input_per_1k: 0.0008
+    price_output_per_1k: 0.004
+    latency_ms_p50: 380
+    context_window: 200000
+    max_output_tokens: 8192
+  gpt-4o:
+    provider: openai
+    tier: medium
+    price_input_per_1k: 0.0025
+    price_output_per_1k: 0.01
+    latency_ms_p50: 650
+    context_window: 128000
+    max_output_tokens: 16384
+  claude-3-5-sonnet:
+    provider: anthropic
+    tier: medium
+    price_input_per_1k: 0.003
+    price_output_per_1k: 0.015
+    latency_ms_p50: 720
+    context_window: 200000
+    max_output_tokens: 8192
+  gpt-4-turbo:
+    provider: openai
+    tier: large
+    price_input_per_1k: 0.01
+    price_output_per_1k: 0.03
+    latency_ms_p50: 1400
+    context_window: 128000
+    max_output_tokens: 4096
+  claude-3-opus:
+    provider: anthropic
+    tier: large
+    price_input_per_1k: 0.015
+    price_output_per_1k: 0.075
+    latency_ms_p50: 2100
+    context_window: 200000
+    max_output_tokens: 4096
+
+# Routing table: complexity class -> ordered candidate models.
+# The first available model wins; on failure the router walks the list.
+routing:
+  simple:
+    - gpt-4o-mini
+    - claude-3-5-haiku
+  medium:
+    - gpt-4o
+    - claude-3-5-sonnet
+    - gpt-4o-mini
+  complex:
+    - claude-3-opus
+    - gpt-4-turbo
+    - gpt-4o
+
+# Semantic cache
+cache:
+  similarity_threshold: 0.85
+  ttl_seconds: 3600
+  max_entries: 10000
+
+# Cost / budget
+budget:
+  monthly_budget_usd: 100.0
+  warn_at_fraction: 0.8
+
+# Reliability
+reliability:
+  circuit_breaker_failures: 3
+  circuit_breaker_cooldown_seconds: 60
+  request_timeout_seconds: 30
